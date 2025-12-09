@@ -1,5 +1,5 @@
 import Hero from "./assets/components/hero.jsx";
-import Navbar from "./assets/components/Navbar.jsx";
+import Navbar from "./assets/components/navbar.jsx";
 import Highlights from "./assets/components/Highlights.jsx";
 import Model from "./assets/components/Model.jsx";
 import Appleai from "./assets/components/Appleai.jsx";
