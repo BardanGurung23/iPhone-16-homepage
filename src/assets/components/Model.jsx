@@ -1,5 +1,5 @@
 import React from "react";
-import "../../app.css";
+import "../../App.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ModelView from "./ModelView";
