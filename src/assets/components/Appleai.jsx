@@ -1,8 +1,38 @@
 import React from "react";
 import { aivideo, iPhone16, applesec, appleLogo } from "../utils";
 import "../../App.css";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
 const Appleai = () => {
+  useGSAP(() => {
+    gsap.from(".ani3", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani3",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    gsap.from(".ani4", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani4",
+        start: "top 80%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
   return (
     <>
       <div className="section-background w-full h-[450px] flex justify-center mb-[118px]">
@@ -19,7 +49,7 @@ const Appleai = () => {
       </div>
       <div className="gray-bg">
         <div className="flex justify-center py-[118px]">
-          <p className="w-[658px] font-sf-pro text-[21px] font-medium text-center text-[#6e6e73] leading-[1.381002381] tracking-[.011em]">
+          <p className="ani3 w-[658px] font-sf-pro text-[21px] font-medium text-center text-[#6e6e73] leading-[1.381002381] tracking-[.011em]">
             iPhone 16 is built for Apple Intelligence, the personal intelligence
             system that helps you{" "}
             <strong className="strong-text">
@@ -38,16 +68,17 @@ const Appleai = () => {
                   alt="Apple security"
                   width={62}
                   height={82}
+                  className="ani4"
                 />
               </div>
               <div>
-                <h3 className="h3-style mt-[40px]">
+                <h3 className="ani4 h3-style mt-[40px]">
                   Great powers comes with great privacy.
                 </h3>
               </div>
               <div className="flex gap-[40px] mt-[40px]">
                 <div>
-                  <p className="p-style">
+                  <p className="ani4 p-style">
                     Apple Intelligence is designed to{" "}
                     <strong className="strong-text">
                       protect your privacy at every step
@@ -58,7 +89,7 @@ const Appleai = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="p-style">
+                  <p className="ani4 p-style">
                     And with{" "}
                     <strong className="strong-text">
                       groundbreaking Private Cloud Compute

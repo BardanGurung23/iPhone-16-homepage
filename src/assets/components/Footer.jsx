@@ -13,7 +13,7 @@ const Footer = () => {
             you.
           </p>
           <p className="font-semibold text-gray text-xs">
-            Or call 000800-040-1966
+            Or call XXXX-XXXX-XXXX
           </p>
         </div>
 
@@ -21,7 +21,8 @@ const Footer = () => {
 
         <div className="flex md:flex-row flex-col md:items-center justify-between">
           <p className="font-semibold text-gray text-xs">
-            Copright @ 2024 Apple Inc. All rights reserved.
+            Copyright @ 2024 Apple Inc. All rights reserved. Made by Bardan
+            Gurung.
           </p>
           <div className="flex">
             {footerLinks.map((link, i) => (

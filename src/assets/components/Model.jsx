@@ -14,6 +14,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Model = () => {
+  useGSAP(() => {
+    gsap.from(".ani2", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani2",
+        start: "top 90%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
     title: "iPhone 16 in Ultramarine",
@@ -51,9 +65,7 @@ const Model = () => {
   return (
     <section className="common-paddings">
       <div className="screen-max-width">
-        <h1 title="heading" className="title-text">
-          Take a closer look.
-        </h1>
+        <h1 className="title-text ani2">Take a closer look.</h1>
         <div className="flex flex-col items-center mt-5">
           <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
             <ModelView
@@ -99,7 +111,7 @@ const Model = () => {
                 {models.map((item, i) => (
                   <li
                     key={i}
-                    className="w-6 h-6 rounded-full mx-2 cursoe-pointer"
+                    className="w-6 h-6 rounded-full mx-2 cursor-pointer"
                     style={{ backgroundColor: item.color[0] }}
                     onClick={() => setModel(item)}
                   />

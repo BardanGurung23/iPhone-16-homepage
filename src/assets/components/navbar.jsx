@@ -4,19 +4,19 @@ import { bagImage } from "../utils/index.js";
 import { searchImage } from "../utils/index.js";
 const Navbar = () => {
   return (
-    <header className="w-full pb-5 pt-[13px] sm:px-10 flex justify-center items-center">
+    <header className="relative z-10 w-full pb-5 pt-[13px] sm:px-10 flex justify-center items-center">
       <nav className="flex items-center gap-[36px]">
         <div className="flex items-center">
           <img src={appleLogo} alt="" width={12} height={14} />
         </div>
         <div className="flex items-center gap-[36px]">
-          {navItems.map((item) => (
+          {navItems.map((i) => (
             <a
-              className="text-custom-white hover:text-black text-[12px] font-sf-pro font-light"
-              key={item.name}
-              href={item.path}
+              className="text-custom-white text-[12px] font-sf-pro font-light"
+              key={i.name}
+              href={i.path}
             >
-              {item.name}
+              {i.name}
             </a>
           ))}
         </div>

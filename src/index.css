@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navclass:hover {
+  color: black;
+  background-color: black;
+}

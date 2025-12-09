@@ -8,14 +8,65 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 const Feature = () => {
+  useGSAP(() => {
+    gsap.from(".ani5", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani5",
+        start: "top 90%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    gsap.from(".ani6", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani6",
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    gsap.from(".ani7", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani7",
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    gsap.from(".img7", {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".img7",
+        start: "top 60%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
   return (
     <>
       <div className="gray-bg">
         <div className=" py-[109px] ">
           <div className="min-width">
             <div className="scroll-animate h1-style margin-l">
-              <h1 className="text-custom-purple">Take total Camera Control.</h1>
-              <h1>Touch. Zoom. Click. Quick.</h1>
+              <h1 className="text-custom-purple ani5">
+                Take total Camera Control.
+              </h1>
+              <h1 className="ani5">Touch. Zoom. Click. Quick.</h1>
             </div>
           </div>
         </div>
@@ -27,11 +78,11 @@ const Feature = () => {
         <div className="w-full h-[100vh] flex items-center ">
           <div className="bg-white rounded-[28px] w-[1040px] h-[594px] m-[auto] flex justify-between overflow-hidden">
             <div className="scroll-animate flex flex-col justify-center py-[56px] ml-[109px] w-[329px]">
-              <h3 className="text-size">Visual intelligence</h3>
-              <h1 className="font-sf-pro text-[32px] leading-[36px] font-medium mt-[25px]">
+              <h3 className="text-size ani6">Visual intelligence</h3>
+              <h1 className="font-sf-pro text-[32px] leading-[36px] font-medium mt-[25px] ani6">
                 See the world through an entirly new lens.
               </h1>
-              <p className="m-text-size mt-[25px] text-text-gray">
+              <p className="m-text-size mt-[25px] text-text-gray ani6">
                 Use <strong className="strong-text">visual intelligence</strong>{" "}
                 through Camera Control to instantly learn about objects and
                 places you see. Just{" "}
@@ -44,20 +95,28 @@ const Feature = () => {
               </p>
             </div>
             <div className="mt-[60px] mr-[30px]">
-              <img src={Featimg} alt="" width={419} height={564} />
+              <img
+                src={Featimg}
+                alt=""
+                width={419}
+                height={564}
+                className="ani6"
+              />
             </div>
           </div>
         </div>
         <div className="bg-white w-full">
           <div className="scroll-animate min-width h-[789px] flex flex-col justify-center padding-l">
             <div className="w-[874px]">
-              <h1 className="h1-style text-custom-pink">New Camera System</h1>
-              <h1 className="h1-style">
+              <h1 className="h1-style text-custom-pink ani7">
+                New Camera System
+              </h1>
+              <h1 className="h1-style ani7">
                 Go to great lengths to get the perfect shot.
               </h1>
             </div>
-            <div className="w-[878px] mt-10">
-              <p className="text-size">
+            <div className="w-[878px] mt-10 ">
+              <p className="text-size ani7">
                 The{" "}
                 <strong className="strong-text">
                   versatile new iPhone 16 camera system{" "}
@@ -78,7 +137,7 @@ const Feature = () => {
           </div>
           <div className="pink-gradient relative">
             <div className="half-hidden-left">
-              <img src={iphonepink} alt="" />
+              <img className="img7" src={iphonepink} alt="" />
             </div>
           </div>
         </div>

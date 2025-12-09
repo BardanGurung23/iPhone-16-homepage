@@ -6,14 +6,28 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Chip = () => {
+  useGSAP(() => {
+    gsap.from(".ani9", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".ani9",
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }, []);
   return (
     <>
       <section className="bg-black pt-80">
         <div>
           <div className="scroll-animate min-width pb-40 padding-l">
-            <h1 className="h1-style  text-white">
+            <h1 className="h1-style  text-white ani9">
               Explore the all new <br />
-              <span className="gradient-text">A18 Chip</span>
+              <span className="gradient-text ani9">A18 Chip</span>
             </h1>
           </div>
           <div>
